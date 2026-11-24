@@ -1,4 +1,4 @@
-###Zero-Trust SSH Onboarding for SecurePay's Staging Infrastructure
+***Zero-Trust SSH Onboarding for SecurePay's Staging Infrastructure***
 For security compliance, the company strictly prohibits password-based logins for developers.
 
 You must configure your local workstation to authenticate to the remote Linux servers using SSH RSA key pairs and a custom client configuration
