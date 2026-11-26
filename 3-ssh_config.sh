@@ -4,6 +4,6 @@
 Host school
     HostName 144.217.6.26
     User darlinr
-    IdentitiesFile ~/.ssh/school
+    IdentityFile ~/.ssh
     IdentitiesOnly yes
     PasswordAuthentication no
