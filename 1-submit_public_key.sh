@@ -2,7 +2,7 @@
 
 # shares the public key with admin for registration on the sever
 #
-pub_key="${1:-$HOME/.ssh/keys/school.pub}"
+pub_key="${1:-$HOME/.ssh/school.pub}"
 
 if [ ! -f "$pub_key" ]; then
   echo "Error: key not found: $pub_key" >&2
