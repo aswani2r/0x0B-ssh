@@ -21,3 +21,9 @@ Connects to a sever using a private key with a single character flag -i, using m
 
 #Task 4: Grant Access to the Deployment System
     Allows the automated deployment tools (like Jenkins or GitHub Actions) to pull code onto the server, the CI/CD system needs access.
+
+#sources
+https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
+https://www.ssh.com/academy/ssh/keygen
+https://medium.com/@rafal.kedziorski/secure-ssh-key-deployment-using-bash-a-senior-developers-guide-304af6f25dd7
+https://serverfault.com/questions/409788/ssh-autologin-works-sporadically
