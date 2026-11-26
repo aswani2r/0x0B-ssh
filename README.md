@@ -1,14 +1,23 @@
-***Zero-Trust SSH Onboarding for SecurePay's Staging Infrastructure***
-For security compliance, the company strictly prohibits password-based logins for developers.
+#SecurePay-SSH-Onboarding-project
+This is an individual project administered by Reduzer School to gauge the grasp of the following concepts:
 
-You must configure your local workstation to authenticate to the remote Linux servers using SSH RSA key pairs and a custom client configuration
-Your goal is to establish a secure, passwordless connection to the staging server to begin your work.
+#SSH(Secure Shell) for remote acess management
+    Bash scripting for automating tasks
+    File permisions to ensure the student secures their work environment
+    Git and Github to ensure the student understands version control
+    Documentation using coomit messages, in-file comments and README.md markdown file to explain what the student is doing in the project for future reference.
 
-Your onboarding workflow is as follows:
-Generate your own SSH key pair on your local workstation.
-Send your public key to the IT administrator for registration on the staging server.
-Once registered, connect to the server using your private key.
-Configure your SSH client for streamlined, passwordless access.
-Grant the CI/CD deployment system access to the server.
-Automate the client configuration with Puppet.
-By the end of this project, you will have a fully configured, secure, passwordless SSH workflow that mirrors what real DevOps teams use in production.
+#File: 0-create_ssh_key_pair
+    Cretaes a shell script that generates a 4096-bit rsa key pair named school & school.pub secured with a password. Verifies they key pair existed using the commands ls -l school school.pub
+
+#Task 1: Submit Your Public Key for Registration
+    Uses a shell script that checks if the public key school.pub exists; if true it displays its contents and a custom reminder to user to only submit public key. If the public key does not exist the script returns 1 and prints a custom error telling the user the key was not found.Updated the .gitignore file which allows git to ignore uploading any keys not ending with ".pub".
+
+#Task 2: Connect Using Your Private Key
+Connects to a sever using a private key with a single character flag -i, using my own username, drops into a remote server shell without asking for a password.
+
+#Task 3: Streamlining the Workflow (Client Configuration File)
+    Configures your local SSH client to automatically use the school key and strictly refuse password authentication, ensuring you never accidentally fall back to an insecure login method.
+
+#Task 4: Grant Access to the Deployment System
+    Allows the automated deployment tools (like Jenkins or GitHub Actions) to pull code onto the server, the CI/CD system needs access.
